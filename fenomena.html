@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fenomena Sosial - SIKUBER</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="loadingScreen"><div class="spinner"></div></div>
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="SIKUBER" class="brand-logo"> SIKUBER</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="fenomena.html" class="active">Fenomena</a></li>
+    <li><a href="moral.html">Nilai Moral</a></li>
+    <li><a href="simulasi.html">Simulasi</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="pengaduan.html">Pengaduan</a></li>
+    <li><a href="video.html">Video Edukasi</a></li>
+    <li><a href="kesimpulan.html">Kesimpulan</a></li>
+  </ul>
+  <div class="navbar-controls">
+    <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="hero" style="min-height:50vh;padding:90px 2rem 5rem;">
+  <div class="hero-content">
+    <div class="hero-badge">📊 Pahami Dulu</div>
+    <h1 style="font-size:clamp(2rem,5vw,3.5rem);">Fenomena Sosial<br><span class="hero-title-accent">di Era Digital</span></h1>
+    <p class="hero-subtitle">Ujaran Kebencian, Intoleransi, dan Cyberbullying</p>
+    <p class="hero-description">Pelajari fenomena negatif yang sering terjadi di media sosial dan dampaknya terhadap kerukunan beragama.</p>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <p class="section-eyebrow">5 Fenomena Utama</p>
+    <h2 class="section-title">Fenomena yang Perlu Kita Pahami</h2>
+    <p class="section-subtitle">Memahami fenomena ini adalah langkah pertama untuk mencegahnya terjadi di sekitar kita.</p>
+
+    <div class="card fade-in" style="margin-bottom:1.5rem;">
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;">
+        <div class="card-icon" style="background:linear-gradient(135deg,#dc2626,#ef4444);flex-shrink:0;">😠</div>
+        <div>
+          <h3 class="card-title">1. Ujaran Kebencian (Hate Speech)</h3>
+          <p class="card-text"><strong>Definisi:</strong> Ujaran yang merendahkan, mengintimidasi, atau menyerang seseorang/kelompok berdasarkan identitas agama, etnis, atau kepercayaan.</p>
+          <div style="margin:1rem 0;">
+            <p style="font-weight:600;font-size:0.9rem;color:var(--text);margin-bottom:0.5rem;">Contoh di Media Sosial:</p>
+            <ul style="margin-left:1.5rem;line-height:1.8;color:var(--text-light);font-size:0.9rem;">
+              <li>"Semua orang dari [agama tertentu] adalah teroris"</li>
+              <li>Menyebarkan meme yang melecehkan suatu agama</li>
+              <li>Komentar yang menyerang ritual keagamaan tertentu</li>
+            </ul>
+          </div>
+          <div class="info-box danger">
+            <span>⚠️</span>
+            <div><div class="info-box-title">Dampak Sosial</div>
+            <p>Memicu konflik sosial, meningkatkan polarisasi, menurunkan toleransi, dan menciptakan diskriminasi terhadap kelompok tertentu.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card fade-in" style="margin-bottom:1.5rem;">
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;">
+        <div class="card-icon" style="background:linear-gradient(135deg,#b45309,#f59e0b);flex-shrink:0;">🚫</div>
+        <div>
+          <h3 class="card-title">2. Intoleransi Beragama</h3>
+          <p class="card-text"><strong>Definisi:</strong> Ketidakmampuan atau penolakan untuk menghormati perbedaan kepercayaan agama dan keyakinan orang lain.</p>
+          <div style="margin:1rem 0;">
+            <p style="font-weight:600;font-size:0.9rem;color:var(--text);margin-bottom:0.5rem;">Bentuk Intoleransi Digital:</p>
+            <ul style="margin-left:1.5rem;line-height:1.8;color:var(--text-light);font-size:0.9rem;">
+              <li>Menolak mendengarkan pendapat berbeda tentang agama</li>
+              <li>Memblokir pertemanan karena perbedaan agama</li>
+              <li>Menciptakan echo chamber satu sudut pandang</li>
+              <li>Mengatakan orang dari agama lain tidak berhak berbicara</li>
+            </ul>
+          </div>
+          <div class="info-box warning">
+            <span>⚠️</span>
+            <div><div class="info-box-title">Dampak Sosial</div>
+            <p>Fragmentasi sosial, kehilangan dialog, meningkatnya prejudis, dan berkurangnya empati antarumat beragama.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card fade-in" style="margin-bottom:1.5rem;">
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;">
+        <div class="card-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa);flex-shrink:0;">👿</div>
+        <div>
+          <h3 class="card-title">3. Cyberbullying Berbasis Agama</h3>
+          <p class="card-text"><strong>Definisi:</strong> Penggunaan teknologi digital untuk menghina, mengancam, atau melecehkan seseorang karena agama atau kepercayaan mereka, secara berulang dan disengaja.</p>
+          <div style="margin:1rem 0;">
+            <p style="font-weight:600;font-size:0.9rem;color:var(--text);margin-bottom:0.5rem;">Bentuk Cyberbullying:</p>
+            <ul style="margin-left:1.5rem;line-height:1.8;color:var(--text-light);font-size:0.9rem;">
+              <li>Mengirim komentar negatif berulang di setiap postingan seseorang</li>
+              <li>Membuat grup untuk menghina seseorang berdasarkan agamanya</li>
+              <li>Menyebarkan rumor palsu tentang ritual keagamaan</li>
+              <li>Mengancam keselamatan fisik karena perbedaan agama</li>
+            </ul>
+          </div>
+          <div class="info-box danger">
+            <span>⚠️</span>
+            <div><div class="info-box-title">Dampak pada Korban</div>
+            <p>Depresi, kecemasan, trauma psikologis, menurunnya harga diri, dan perubahan perilaku yang signifikan.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card fade-in" style="margin-bottom:1.5rem;">
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;">
+        <div class="card-icon" style="background:linear-gradient(135deg,#0891b2,#22d3ee);flex-shrink:0;">❌</div>
+        <div>
+          <h3 class="card-title">4. Kurangnya Rasa Hormat terhadap Perbedaan</h3>
+          <p class="card-text"><strong>Definisi:</strong> Sikap meremehkan atau tidak peduli terhadap perbedaan agama, kepercayaan, dan praktik spiritual orang lain.</p>
+          <div style="margin:1rem 0;">
+            <p style="font-weight:600;font-size:0.9rem;color:var(--text);margin-bottom:0.5rem;">Manifestasi di Media Sosial:</p>
+            <ul style="margin-left:1.5rem;line-height:1.8;color:var(--text-light);font-size:0.9rem;">
+              <li>Memajang lambang agama sebagai bahan lelucon</li>
+              <li>Membuat konten yang menyiratkan superioritas agama</li>
+              <li>Tidak menghormati waktu ibadah agama lain</li>
+            </ul>
+          </div>
+          <div class="info-box warning">
+            <span>⚠️</span>
+            <div><div class="info-box-title">Dampak Sosial</div>
+            <p>Memperburuk hubungan antarumat, menciptakan rasa dendam, dan mengancam kohesi masyarakat.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card fade-in">
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;">
+        <div class="card-icon" style="background:linear-gradient(135deg,#15803d,#4ade80);flex-shrink:0;">⚡</div>
+        <div>
+          <h3 class="card-title">5. Misinformasi dan Disinformasi Berbasis Agama</h3>
+          <p class="card-text"><strong>Definisi:</strong> Penyebaran informasi yang salah atau menyesatkan tentang agama tertentu dengan tujuan merusak reputasi atau memicu konflik.</p>
+          <div style="margin:1rem 0;">
+            <p style="font-weight:600;font-size:0.9rem;color:var(--text);margin-bottom:0.5rem;">Contoh Misinformasi:</p>
+            <ul style="margin-left:1.5rem;line-height:1.8;color:var(--text-light);font-size:0.9rem;">
+              <li>Menyebarkan berita palsu tentang ritual agama tertentu</li>
+              <li>Mengambil ayat kitab suci dari konteks aslinya</li>
+              <li>Menyebarkan hoax yang menyalahkan agama tertentu</li>
+              <li>Menggunakan gambar/video palsu untuk memprovokasi</li>
+            </ul>
+          </div>
+          <div class="info-box danger">
+            <span>⚠️</span>
+            <div><div class="info-box-title">Dampak Sosial</div>
+            <p>Meningkatkan kesalahpahaman, memperdalam prejudis, memicu kekerasan fisik, dan merusak dialog konstruktif.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray">
+  <div class="container">
+    <h2 class="section-title">Dampak Kumulatif</h2>
+    <p class="section-subtitle">Fenomena-fenomena ini bila dibiarkan akan berdampak serius pada kehidupan berbangsa</p>
+    <div class="grid grid-2">
+      <div class="card fade-in">
+        <div class="card-icon">📉</div>
+        <h3 class="card-title">Dampak Psikologis</h3>
+        <ul style="margin:0.75rem 0 0 1rem;line-height:1.9;color:var(--text-light);font-size:0.9rem;">
+          <li>Meningkatnya rasa takut dan kecemasan</li>
+          <li>Trauma psikologis pada korban</li>
+          <li>Menurunnya kepercayaan diri</li>
+          <li>Isolasi sosial dan kehilangan identitas</li>
+        </ul>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon" style="background:linear-gradient(135deg,#dc2626,#ef4444);">🏛️</div>
+        <h3 class="card-title">Dampak Sosial</h3>
+        <ul style="margin:0.75rem 0 0 1rem;line-height:1.9;color:var(--text-light);font-size:0.9rem;">
+          <li>Perpecahan masyarakat dan polarisasi</li>
+          <li>Menurunnya kepercayaan antarkelompok</li>
+          <li>Konflik horizontal yang berkepanjangan</li>
+          <li>Terancamnya persatuan dan kesatuan bangsa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary" style="text-align:center;">
+  <div class="container" style="max-width:640px;">
+    <h2 style="color:white;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:1rem;">Lanjut ke Nilai Moral?</h2>
+    <p style="color:rgba(255,255,255,0.75);margin-bottom:2rem;">Setelah memahami fenomenanya, pelajari bagaimana Pancasila menjadi solusi.</p>
+    <a href="moral.html" class="btn btn-primary">⚖️ Pelajari Nilai Moral →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="img/logo.png" alt="SIKUBER" class="footer-logo">
+        <h4>SIKUBER</h4>
+        <p>Platform edukasi toleransi beragama berbasis nilai-nilai Pancasila.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Menu</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fenomena.html">Fenomena Sosial</a></li>
+          <li><a href="moral.html">Nilai Moral & Etika</a></li>
+          <li><a href="simulasi.html">Simulasi Komentar</a></li>
+          <li><a href="video.html">Video Edukasi</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <p>📧 [email Anda]</p>
+        <p style="margin-top:0.5rem;">📞 [nomor HP Anda]</p>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 <span>SIKUBER</span> — All rights reserved.</p></div>
+  </div>
+</footer>
+<button id="scrollToTop">↑</button>
+<script src="js/main.js"></script>
+</body>
+</html>

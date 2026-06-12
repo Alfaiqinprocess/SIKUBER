@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIKUBER - Sistem Informasi Kerukunan Beragama</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loadingScreen"><div class="spinner"></div></div>
+<div id="progressBar"></div>
+
+<!-- Navbar -->
+<nav>
+  <a href="index.html" class="navbar-brand">
+    <img src="img/logo.png" alt="SIKUBER" class="brand-logo">
+    SIKUBER
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="fenomena.html">Fenomena</a></li>
+    <li><a href="moral.html">Nilai Moral</a></li>
+    <li><a href="simulasi.html">Simulasi</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="pengaduan.html">Pengaduan</a></li>
+    <li><a href="video.html">Video Edukasi</a></li>
+    <li><a href="kesimpulan.html">Kesimpulan</a></li>
+  </ul>
+  <div class="navbar-controls">
+    <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <img src="img/logo.png" alt="SIKUBER Logo" class="hero-logo">
+    <div class="hero-badge">🇮🇩 &nbsp;Bhinneka Tunggal Ika</div>
+    <h1>SIKUBER<br><span class="hero-title-accent">Harmoni dalam Keberagaman</span></h1>
+    <p class="hero-subtitle">Sistem Informasi Kerukunan Beragama</p>
+    <p class="hero-description">Membangun toleransi dan etika digital berdasarkan nilai-nilai Pancasila untuk generasi Indonesia yang lebih bersatu.</p>
+    <div class="hero-buttons">
+      <a href="#tentang" class="btn btn-primary">📚 Pelajari Sekarang</a>
+      <a href="fenomena.html" class="btn btn-secondary">🚀 Mulai Edukasi</a>
+    </div>
+  </div>
+</section>
+
+<!-- Quote Section -->
+<section class="bg-white" style="padding:4rem 0;">
+  <div class="container">
+    <div class="quote-block">
+      <img src="img/garuda.webp" alt="Garuda Pancasila" style="width:80px;height:auto;margin:0 auto 1.5rem;opacity:0.9;">
+      <p class="quote-text">"Berbeda Keyakinan, Tetap Bersaudara"</p>
+      <p class="quote-source">— Nilai Pancasila untuk Keberagaman Indonesia —</p>
+    </div>
+  </div>
+</section>
+
+<!-- Tentang Section -->
+<section id="tentang" class="bg-light">
+  <div class="container">
+    <p class="section-eyebrow">Tentang Kami</p>
+    <h2 class="section-title">Apa itu SIKUBER?</h2>
+    <p class="section-subtitle">Platform edukasi interaktif yang dirancang untuk meningkatkan pemahaman toleransi beragama di era digital</p>
+    <div class="grid grid-2">
+      <div class="card fade-in">
+        <div class="card-icon">🌍</div>
+        <h3 class="card-title">Edukasi Toleransi</h3>
+        <p class="card-text">SIKUBER adalah platform edukasi yang menyediakan materi pembelajaran interaktif tentang toleransi beragama berdasarkan nilai-nilai Pancasila.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">🤝</div>
+        <h3 class="card-title">Kerukunan Umat Beragama</h3>
+        <p class="card-text">Mengajarkan cara menghormati perbedaan, berkomunikasi etis, dan menjaga persatuan dalam keberagaman yang menjadi kekuatan bangsa.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">💻</div>
+        <h3 class="card-title">Etika Digital</h3>
+        <p class="card-text">Era digital membawa tantangan baru dalam menjaga toleransi. SIKUBER membantu memahami etika di media sosial dan cara mencegah cyberbullying berbasis agama.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">🎓</div>
+        <h3 class="card-title">Pembelajaran Interaktif</h3>
+        <p class="card-text">Dengan simulasi, quiz, dan studi kasus interaktif, SIKUBER membuat pembelajaran Pancasila menjadi menyenangkan dan mudah diterapkan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sila Pertama Pancasila -->
+<section class="pancasila-strip">
+  <div class="container">
+    <div class="pancasila-grid">
+      <img src="img/garuda.webp" alt="Garuda Pancasila" class="pancasila-emblem fade-in">
+      <div class="fade-in">
+        <p class="section-eyebrow light">Sila Pertama Pancasila</p>
+        <h2 style="color:white;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;margin-bottom:0.5rem;">"Ketuhanan Yang Maha Esa"</h2>
+        <p style="color:rgba(255,255,255,0.7);margin-bottom:1.5rem;font-size:0.95rem;">Fondasi moral bagi seluruh masyarakat Indonesia yang mengajarkan:</p>
+        <ul class="pancasila-points">
+          <li><span class="check-icon">✓</span> Percaya dan takwa kepada Tuhan Yang Maha Esa sesuai keyakinan masing-masing</li>
+          <li><span class="check-icon">✓</span> Menghormati perbedaan agama dan keyakinan sesama warga</li>
+          <li><span class="check-icon">✓</span> Tidak memaksakan agama kepada orang lain</li>
+          <li><span class="check-icon">✓</span> Menjaga kerukunan antarumat beragama</li>
+          <li><span class="check-icon">✓</span> Berkomitmen untuk persatuan dan kesatuan bangsa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fitur Utama -->
+<section class="bg-white">
+  <div class="container">
+    <p class="section-eyebrow">Fitur Lengkap</p>
+    <h2 class="section-title">Jelajahi SIKUBER</h2>
+    <p class="section-subtitle">Setiap fitur dirancang untuk pengalaman belajar yang mendalam dan interaktif</p>
+    <div class="grid grid-3">
+      <div class="feature-card fade-in">
+        <div class="card-icon" style="margin-bottom:1.25rem;">📊</div>
+        <h3 class="card-title">Fenomena Sosial</h3>
+        <p class="card-text">Pelajari fenomena ujaran kebencian, intoleransi, dan cyberbullying yang terjadi di media sosial beserta dampaknya.</p>
+        <a href="fenomena.html" class="btn btn-primary btn-small" style="margin-top:1.25rem;display:inline-flex;">Pelajari →</a>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="card-icon" style="margin-bottom:1.25rem;">⚖️</div>
+        <h3 class="card-title">Nilai Moral & Etika</h3>
+        <p class="card-text">Memahami hubungan antara Sila Pertama Pancasila dengan toleransi, etika komunikasi, dan kerukunan masyarakat.</p>
+        <a href="moral.html" class="btn btn-primary btn-small" style="margin-top:1.25rem;display:inline-flex;">Pelajari →</a>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="card-icon" style="margin-bottom:1.25rem;">💬</div>
+        <h3 class="card-title">Simulasi Komentar</h3>
+        <p class="card-text">Coba fitur interaktif untuk mengecek apakah komentar Anda mencerminkan nilai-nilai toleransi Pancasila.</p>
+        <a href="simulasi.html" class="btn btn-primary btn-small" style="margin-top:1.25rem;display:inline-flex;">Coba →</a>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="card-icon" style="margin-bottom:1.25rem;">❓</div>
+        <h3 class="card-title">Quiz Toleransi</h3>
+        <p class="card-text">Uji pemahaman Anda tentang toleransi beragama, etika digital, dan nilai-nilai Pancasila melalui 5 soal pilihan ganda.</p>
+        <a href="quiz.html" class="btn btn-primary btn-small" style="margin-top:1.25rem;display:inline-flex;">Mulai →</a>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="card-icon" style="margin-bottom:1.25rem;">📝</div>
+        <h3 class="card-title">Simulasi Pengaduan</h3>
+        <p class="card-text">Pelajari cara melaporkan konten yang tidak toleran menggunakan form pengaduan yang interaktif.</p>
+        <a href="pengaduan.html" class="btn btn-primary btn-small" style="margin-top:1.25rem;display:inline-flex;">Buka →</a>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="card-icon accent" style="margin-bottom:1.25rem;">🎬</div>
+        <h3 class="card-title">Video Edukasi</h3>
+        <p class="card-text">Tonton video-video nyata tentang fenomena intoleransi beragama sebagai bahan pembelajaran dan refleksi bersama.</p>
+        <a href="video.html" class="btn btn-primary btn-small" style="margin-top:1.25rem;display:inline-flex;">Tonton →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="bg-primary">
+  <div class="container">
+    <p class="section-eyebrow light">Urgensi Masalah</p>
+    <h2 class="section-title light" style="margin-bottom:3rem;">Mengapa Toleransi Penting?</h2>
+    <div class="grid grid-4">
+      <div class="stat-card fade-in">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Agama resmi yang diakui di Indonesia</div>
+      </div>
+      <div class="stat-card fade-in">
+        <div class="stat-number">300+</div>
+        <div class="stat-label">Suku bangsa dan etnis di Nusantara</div>
+      </div>
+      <div class="stat-card fade-in">
+        <div class="stat-number">1.700+</div>
+        <div class="stat-label">Bahasa daerah yang ada di Indonesia</div>
+      </div>
+      <div class="stat-card fade-in">
+        <div class="stat-number">1</div>
+        <div class="stat-label">Slogan pemersatu: Bhinneka Tunggal Ika</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white" style="text-align:center;">
+  <div class="container" style="max-width:640px;">
+    <img src="img/garuda.webp" alt="" style="width:70px;margin:0 auto 1.5rem;opacity:0.8;">
+    <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;margin-bottom:1rem;color:var(--text);">Siap Menjadi Duta Toleransi?</h2>
+    <p style="color:var(--text-light);margin-bottom:2rem;line-height:1.7;">Mari bersama-sama membangun era digital yang lebih toleran dan menjunjung tinggi nilai-nilai Pancasila.</p>
+    <a href="fenomena.html" class="btn btn-primary" style="font-size:1rem;padding:0.875rem 2.5rem;">🚀 Mulai Belajar Sekarang</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="img/logo.png" alt="SIKUBER" class="footer-logo">
+        <h4>SIKUBER</h4>
+        <p>Platform edukasi untuk meningkatkan pemahaman toleransi beragama di era digital berdasarkan nilai-nilai Pancasila.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Menu</h4>
+        <ul class="footer-links">
+          <li><a href="fenomena.html">Fenomena Sosial</a></li>
+          <li><a href="moral.html">Nilai Moral & Etika</a></li>
+          <li><a href="simulasi.html">Simulasi Komentar</a></li>
+          <li><a href="quiz.html">Quiz Toleransi</a></li>
+          <li><a href="pengaduan.html">Simulasi Pengaduan</a></li>
+          <li><a href="video.html">Video Edukasi</a></li>
+          <li><a href="kesimpulan.html">Kesimpulan</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <p>📧 [email Anda]</p>
+        <p style="margin-top:0.5rem;">📞 [nomor HP Anda]</p>
+        <p style="margin-top:0.5rem;">📍 Jakarta, Indonesia</p>
+        <div style="margin-top:1.5rem;">
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);">Tugas Pendidikan Pancasila</p>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);">"Pancasila sebagai Nilai Moral dan Etika di Era Digital"</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 <span>SIKUBER</span> — Sistem Informasi Kerukunan Beragama. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollToTop">↑</button>
+<script src="js/main.js"></script>
+</body>
+</html>

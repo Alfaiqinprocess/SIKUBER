@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi Pengaduan - SIKUBER</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="loadingScreen"><div class="spinner"></div></div>
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="SIKUBER" class="brand-logo"> SIKUBER</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="fenomena.html">Fenomena</a></li>
+    <li><a href="moral.html">Nilai Moral</a></li>
+    <li><a href="simulasi.html">Simulasi</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="pengaduan.html" class="active">Pengaduan</a></li>
+    <li><a href="video.html">Video Edukasi</a></li>
+    <li><a href="kesimpulan.html">Kesimpulan</a></li>
+  </ul>
+  <div class="navbar-controls">
+    <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="hero" style="min-height:50vh;padding:90px 2rem 5rem;">
+  <div class="hero-content">
+    <div class="hero-badge">📝 Laporkan</div>
+    <h1 style="font-size:clamp(2rem,5vw,3.5rem);">Simulasi<br><span class="hero-title-accent">Form Pengaduan</span></h1>
+    <p class="hero-subtitle">Laporkan Konten yang Tidak Toleran</p>
+    <p class="hero-description">Pelajari cara melaporkan konten ujaran kebencian, intoleransi, dan cyberbullying dengan menggunakan form pengaduan interaktif ini.</p>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <p class="section-eyebrow">Mengapa Melaporkan?</p>
+    <h2 class="section-title">Aksi Nyata untuk Kerukunan</h2>
+    <div class="grid grid-3">
+      <div class="card fade-in"><div class="card-icon">🛡️</div><h3 class="card-title">Melindungi Komunitas</h3><p class="card-text">Dengan melaporkan konten berbahaya, Anda membantu melindungi komunitas online dari ujaran kebencian dan cyberbullying.</p></div>
+      <div class="card fade-in"><div class="card-icon">📢</div><h3 class="card-title">Menjaga Etika Digital</h3><p class="card-text">Laporan yang tepat membantu platform media sosial menerapkan kebijakan dan menjaga standar etika komunikasi.</p></div>
+      <div class="card fade-in"><div class="card-icon">🤝</div><h3 class="card-title">Memperkuat Kerukunan</h3><p class="card-text">Setiap laporan adalah tindakan nyata untuk memperkuat toleransi dan kerukunan beragama di era digital.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray">
+  <div class="container">
+    <p class="section-eyebrow">Form Interaktif</p>
+    <h2 class="section-title">Form Pengaduan Konten Tidak Toleran</h2>
+    <p class="section-subtitle">Simulasi ini mengajarkan cara melaporkan konten yang melanggar nilai toleransi. Data disimpan di browser Anda saja.</p>
+
+    <div class="info-box warning" style="max-width:700px;margin:0 auto 2rem;">
+      <span>⚠️</span>
+      <div><div class="info-box-title">Simulasi Pendidikan</div>
+      <p>Form ini adalah simulasi. Data tidak dikirim ke server manapun — hanya tersimpan di browser Anda untuk keperluan belajar.</p></div>
+    </div>
+
+    <div class="card" style="max-width:700px;margin:0 auto;">
+      <form id="pengaduanForm" onsubmit="submitPengaduan(event)">
+        <div class="grid grid-2" style="gap:1rem;">
+          <div class="form-group">
+            <label for="namaInput">Nama Lengkap *</label>
+            <input type="text" id="namaInput" placeholder="Masukkan nama Anda" required>
+          </div>
+          <div class="form-group">
+            <label for="emailInput">Email *</label>
+            <input type="email" id="emailInput" placeholder="email@contoh.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="judulInput">Judul Laporan *</label>
+          <input type="text" id="judulInput" placeholder="Ringkasan singkat tentang laporan Anda" required>
+        </div>
+        <div class="form-group">
+          <label for="kategoriInput">Kategori Pelanggaran</label>
+          <select id="kategoriInput">
+            <option value="">-- Pilih Kategori --</option>
+            <option>Ujaran Kebencian</option>
+            <option>Intoleransi Beragama</option>
+            <option>Cyberbullying Berbasis Agama</option>
+            <option>Misinformasi Agama</option>
+            <option>Penistaan Agama</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="deskripsiInput">Deskripsi Laporan *</label>
+          <textarea id="deskripsiInput" placeholder="Ceritakan secara detail kejadian yang Anda laporkan, termasuk kapan, di mana, dan apa yang terjadi..." style="min-height:140px;" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="platformInput">Platform / Media Sosial</label>
+          <select id="platformInput">
+            <option value="">-- Pilih Platform --</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>Twitter / X</option>
+            <option>TikTok</option>
+            <option>YouTube</option>
+            <option>WhatsApp</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="urlInput">Link / URL Konten (opsional)</label>
+          <input type="url" id="urlInput" placeholder="https://...">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;padding:0.875rem;font-size:1rem;margin-top:0.5rem;">📤 Kirim Laporan</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <h2 class="section-title">Riwayat Pengaduan Anda</h2>
+    <div id="historyContainer" style="max-width:700px;margin:0 auto;">
+      <p style="color:var(--text-light);text-align:center;padding:2rem;">Belum ada riwayat pengaduan.</p>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <button class="btn btn-outline" onclick="if(confirm('Hapus semua riwayat?')){localStorage.removeItem('sikuber_reports');loadHistory();}">🗑️ Hapus Riwayat</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box" style="text-align:center;">
+    <div id="modalIcon" style="width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.25rem;"></div>
+    <h3 id="modalTitle" style="font-size:1.3rem;font-weight:700;margin-bottom:0.75rem;"></h3>
+    <div id="modalBody" style="color:var(--text-light);line-height:1.6;font-size:0.95rem;margin-bottom:1.75rem;"></div>
+    <button class="btn btn-primary" onclick="closeModal()">Tutup</button>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section"><img src="img/logo.png" alt="SIKUBER" class="footer-logo"><h4>SIKUBER</h4><p>Platform edukasi toleransi beragama berbasis nilai-nilai Pancasila.</p></div>
+      <div class="footer-section"><h4>Menu</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="fenomena.html">Fenomena</a></li><li><a href="simulasi.html">Simulasi</a></li><li><a href="pengaduan.html">Pengaduan</a></li><li><a href="video.html">Video Edukasi</a></li></ul></div>
+      <div class="footer-section"><h4>Kontak</h4><p>📧 [email Anda]</p><p style="margin-top:0.5rem;">📞 [nomor HP Anda]</p></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 <span>SIKUBER</span> — All rights reserved.</p></div>
+  </div>
+</footer>
+<button id="scrollToTop">↑</button>
+<script src="js/main.js"></script>
+<script src="js/pengaduan.js"></script>
+</body>
+</html>

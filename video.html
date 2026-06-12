@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Edukasi - SIKUBER</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="loadingScreen"><div class="spinner"></div></div>
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="SIKUBER" class="brand-logo"> SIKUBER</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="fenomena.html">Fenomena</a></li>
+    <li><a href="moral.html">Nilai Moral</a></li>
+    <li><a href="simulasi.html">Simulasi</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="pengaduan.html">Pengaduan</a></li>
+    <li><a href="video.html" class="active">Video Edukasi</a></li>
+    <li><a href="kesimpulan.html">Kesimpulan</a></li>
+  </ul>
+  <div class="navbar-controls">
+    <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" style="min-height:50vh;padding:90px 2rem 5rem;">
+  <div class="hero-content">
+    <div class="hero-badge">🎬 Video Edukasi</div>
+    <h1 style="font-size:clamp(2rem,5vw,3.5rem);">Video<br><span class="hero-title-accent">Edukasi & Refleksi</span></h1>
+    <p class="hero-subtitle">Fenomena Intoleransi di Sekitar Kita</p>
+    <p class="hero-description">Tonton video-video nyata yang menggambarkan fenomena intoleransi beragama sebagai bahan pembelajaran dan refleksi bersama agar tidak terulang.</p>
+  </div>
+</section>
+
+<!-- Warning Banner -->
+<section class="bg-white" style="padding:2rem 0;">
+  <div class="container">
+    <div class="info-box warning" style="max-width:900px;margin:0 auto;">
+      <span style="font-size:1.75rem;flex-shrink:0;">⚠️</span>
+      <div>
+        <div class="info-box-title" style="font-size:1rem;">Perhatian Penting — Disclaimer</div>
+        <p style="margin-top:0.35rem;line-height:1.7;">Video-video berikut ditampilkan <strong>semata-mata untuk tujuan pendidikan dan refleksi</strong>. Konten yang menampilkan tindakan intoleransi <strong>tidak disetujui atau didukung</strong> oleh SIKUBER. Tujuannya adalah agar kita memahami dampak nyata intoleransi dan berkomitmen untuk mencegahnya berdasarkan nilai-nilai Pancasila.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filter Bar -->
+<section class="bg-light" style="padding:1.5rem 0 0;">
+  <div class="container">
+    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;padding-bottom:1.5rem;border-bottom:1px solid rgba(13,44,110,0.08);">
+      <button class="filter-btn active" data-filter="all" onclick="filterVideos('all',this)">🎬 Semua Video</button>
+      <button class="filter-btn" data-filter="hate-speech" onclick="filterVideos('hate-speech',this)">😠 Ujaran Kebencian</button>
+      <button class="filter-btn" data-filter="intoleransi" onclick="filterVideos('intoleransi',this)">🚫 Intoleransi</button>
+      <button class="filter-btn" data-filter="cyberbullying" onclick="filterVideos('cyberbullying',this)">👿 Cyberbullying</button>
+      <button class="filter-btn" data-filter="edukasi" onclick="filterVideos('edukasi',this)">✅ Solusi & Edukasi</button>
+    </div>
+  </div>
+</section>
+
+<!-- Video Grid -->
+<section class="bg-light">
+  <div class="container">
+    <p class="section-eyebrow">Kumpulan Video</p>
+    <h2 class="section-title">Pelajari dari Kenyataan</h2>
+    <p class="section-subtitle">Setiap video disertai konteks dan poin pembelajaran agar pemahaman Anda lebih mendalam.</p>
+
+    <div class="grid grid-3" id="videoGrid">
+
+      <!-- Video 1 -->
+      <div class="video-card fade-in" data-category="hate-speech">
+        <div class="video-thumbnail">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <div style="font-size:2.5rem;">🎬</div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;">Link video akan ditambahkan</p>
+        </div></iframe>
+        </div>
+        <div class="video-card-body">
+          <div class="video-card-meta">
+            <span class="badge" style="background:#FEF2F2;color:var(--danger);">😠 Ujaran Kebencian</span>
+          </div>
+          <h3 class="video-card-title" style="margin-top:0.75rem;">Ujaran Kebencian Berbasis Agama di Media Sosial</h3>
+          <p class="video-card-desc">Studi kasus tentang bagaimana ujaran kebencian berbasis agama menyebar di media sosial dan dampaknya terhadap kehidupan nyata.</p>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--light-gray);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">📚 Poin Pembelajaran:</p>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;">Identifikasi ujaran kebencian dan pahami bagaimana cara yang tepat untuk merespons tanpa memperkeruh situasi.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card fade-in" data-category="intoleransi">
+        <div class="video-thumbnail">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <div style="font-size:2.5rem;">🎬</div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;">Link video akan ditambahkan</p>
+        </div></iframe>
+        </div>
+        <div class="video-card-body">
+          <div class="video-card-meta">
+            <span class="badge" style="background:#FFFBEB;color:var(--warning);">🚫 Intoleransi</span>
+          </div>
+          <h3 class="video-card-title" style="margin-top:0.75rem;">Fenomena Intoleransi Beragama di Indonesia</h3>
+          <p class="video-card-desc">Dokumentasi tentang fenomena intoleransi beragama yang terjadi di Indonesia dan bagaimana masyarakat meresponsnya.</p>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--light-gray);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">📚 Poin Pembelajaran:</p>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;">Kenali bentuk-bentuk intoleransi yang sering tidak disadari dan dampaknya terhadap kohesi sosial bangsa.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-card fade-in" data-category="cyberbullying">
+        <div class="video-thumbnail">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <div style="font-size:2.5rem;">🎬</div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;">Link video akan ditambahkan</p>
+        </div></iframe>
+        </div>
+        <div class="video-card-body">
+          <div class="video-card-meta">
+            <span class="badge" style="background:#F5F3FF;color:#6d28d9;">👿 Cyberbullying</span>
+          </div>
+          <h3 class="video-card-title" style="margin-top:0.75rem;">Cyberbullying Berbasis Agama di Era Digital</h3>
+          <p class="video-card-desc">Kisah nyata korban cyberbullying berbasis agama dan bagaimana platform digital bisa menjadi ruang yang aman untuk semua.</p>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--light-gray);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">📚 Poin Pembelajaran:</p>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;">Memahami dampak psikologis cyberbullying terhadap korban dan pentingnya menjadi bystander yang aktif membantu.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="video-card fade-in" data-category="intoleransi">
+        <div class="video-thumbnail">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <div style="font-size:2.5rem;">🎬</div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;">Link video akan ditambahkan</p>
+        </div></iframe>
+        </div>
+        <div class="video-card-body">
+          <div class="video-card-meta">
+            <span class="badge" style="background:#FFFBEB;color:var(--warning);">🚫 Intoleransi</span>
+          </div>
+          <h3 class="video-card-title" style="margin-top:0.75rem;">Diskriminasi Berbasis Agama dan Dampaknya</h3>
+          <p class="video-card-desc">Analisis mendalam tentang praktik diskriminasi berbasis agama dalam kehidupan sehari-hari dan bagaimana Pancasila memberikan solusi.</p>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--light-gray);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">📚 Poin Pembelajaran:</p>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;">Pahami bahwa diskriminasi agama melanggar hak asasi manusia dan bertentangan dengan nilai Sila Pertama Pancasila.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 5 -->
+      <div class="video-card fade-in" data-category="hate-speech">
+        <div class="video-thumbnail">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <div style="font-size:2.5rem;">🎬</div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;">Link video akan ditambahkan</p>
+        </div></iframe>
+        </div>
+        <div class="video-card-body">
+          <div class="video-card-meta">
+            <span class="badge" style="background:#FEF2F2;color:var(--danger);">😠 Ujaran Kebencian</span>
+          </div>
+          <h3 class="video-card-title" style="margin-top:0.75rem;">Misinformasi dan Hoax Berbasis Agama</h3>
+          <p class="video-card-desc">Bagaimana hoax dan misinformasi berbasis agama menyebar dan mempengaruhi persepsi masyarakat terhadap pemeluk agama lain.</p>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--light-gray);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">📚 Poin Pembelajaran:</p>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;">Selalu verifikasi informasi sebelum menyebarkannya. Hoax berbasis agama adalah salah satu pemicu konflik paling berbahaya.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 6 — Solusi/Edukasi -->
+      <div class="video-card fade-in" data-category="edukasi">
+        <div class="video-thumbnail">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <div style="font-size:2.5rem;">🎬</div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;">Link video akan ditambahkan</p>
+        </div></iframe>
+        </div>
+        <div class="video-card-body">
+          <div class="video-card-meta">
+            <span class="badge" style="background:#F0FDF4;color:var(--success);">✅ Solusi & Edukasi</span>
+          </div>
+          <h3 class="video-card-title" style="margin-top:0.75rem;">Membangun Toleransi Beragama di Era Digital</h3>
+          <p class="video-card-desc">Panduan praktis tentang bagaimana membangun dan menjaga toleransi beragama khususnya dalam interaksi di media sosial sehari-hari.</p>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--light-gray);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--success);margin-bottom:0.35rem;">💡 Pesan Positif:</p>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;">Toleransi bukan hanya menahan diri dari hal negatif, tetapi secara aktif menghargai dan merayakan perbedaan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 7 -->
+      <div class="video-card fade-in" data-category="edukasi">
+        <div class="video-thumbnail">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <div style="font-size:2.5rem;">🎬</div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;">Link video akan ditambahkan</p>
+        </div></iframe>
+        </div>
+        <div class="video-card-body">
+          <div class="video-card-meta">
+            <span class="badge" style="background:#F0FDF4;color:var(--success);">✅ Solusi & Edukasi</span>
+          </div>
+          <h3 class="video-card-title" style="margin-top:0.75rem;">Pancasila sebagai Fondasi Kerukunan Bangsa</h3>
+          <p class="video-card-desc">Penjelasan mendalam tentang bagaimana Sila Pertama Pancasila menjadi landasan kerukunan antarumat beragama di Indonesia.</p>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--light-gray);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--success);margin-bottom:0.35rem;">💡 Pesan Positif:</p>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;">Pancasila bukan sekadar ideologi tertulis, tetapi pedoman hidup yang harus diamalkan setiap hari oleh seluruh warga bangsa.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 8 -->
+      <div class="video-card fade-in" data-category="cyberbullying">
+        <div class="video-thumbnail">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <div style="font-size:2.5rem;">🎬</div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;">Link video akan ditambahkan</p>
+        </div></iframe>
+        </div>
+        <div class="video-card-body">
+          <div class="video-card-meta">
+            <span class="badge" style="background:#F5F3FF;color:#6d28d9;">👿 Cyberbullying</span>
+          </div>
+          <h3 class="video-card-title" style="margin-top:0.75rem;">Stop Cyberbullying — Panduan untuk Generasi Digital</h3>
+          <p class="video-card-desc">Cara mengenali, melawan, dan melaporkan cyberbullying berbasis agama di berbagai platform media sosial yang sering digunakan.</p>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--light-gray);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">📚 Poin Pembelajaran:</p>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;">Jangan diam saat melihat cyberbullying terjadi. Melaporkan adalah tindakan moral yang sejalan dengan nilai-nilai Pancasila.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 9 -->
+      <div class="video-card fade-in" data-category="edukasi">
+        <div class="video-thumbnail">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <div style="font-size:2.5rem;">🎬</div>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;">Link video akan ditambahkan</p>
+        </div></iframe>
+        </div>
+        <div class="video-card-body">
+          <div class="video-card-meta">
+            <span class="badge" style="background:#F0FDF4;color:var(--success);">✅ Solusi & Edukasi</span>
+          </div>
+          <h3 class="video-card-title" style="margin-top:0.75rem;">Bhinneka Tunggal Ika — Kekuatan dalam Perbedaan</h3>
+          <p class="video-card-desc">Inspirasi dari kisah nyata masyarakat Indonesia yang berhasil menjaga kerukunan beragama di tengah keberagaman yang luar biasa.</p>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--light-gray);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--success);margin-bottom:0.35rem;">💡 Pesan Positif:</p>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;">Perbedaan adalah kekuatan, bukan kelemahan. Indonesia yang kuat adalah Indonesia yang bersatu dalam keberagaman.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end videoGrid -->
+
+    <div id="noResult" style="display:none;text-align:center;padding:3rem;color:var(--text-light);">
+      <div style="font-size:3rem;margin-bottom:1rem;">🎬</div>
+      <p>Tidak ada video untuk kategori ini.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Tambahkan Video Sendiri -->
+<section class="bg-white">
+  <div class="container" style="max-width:700px;">
+    <p class="section-eyebrow">Kontribusi</p>
+    <h2 class="section-title">Rekomendasikan Video</h2>
+    <p class="section-subtitle">Punya video edukatif tentang toleransi beragama? Rekomendasikan di sini!</p>
+
+    <div class="card fade-in">
+      <h3 class="card-title" style="margin-bottom:1.25rem;">📎 Tambahkan Rekomendasi Video</h3>
+      <div class="form-group">
+        <label for="videoTitle">Judul Video</label>
+        <input type="text" id="videoTitle" placeholder="Contoh: Toleransi Beragama di Indonesia">
+      </div>
+      <div class="form-group">
+        <label for="videoUrl">URL YouTube</label>
+        <input type="url" id="videoUrl" placeholder="https://www.youtube.com/watch?v=...">
+      </div>
+      <div class="form-group">
+        <label for="videoKategori">Kategori</label>
+        <select id="videoKategori">
+          <option value="">-- Pilih Kategori --</option>
+          <option>Ujaran Kebencian</option>
+          <option>Intoleransi</option>
+          <option>Cyberbullying</option>
+          <option>Solusi & Edukasi</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="videoDesc">Deskripsi Singkat</label>
+        <textarea id="videoDesc" placeholder="Ceritakan tentang apa video ini dan mengapa ini penting untuk dipelajari..." style="min-height:100px;"></textarea>
+      </div>
+      <button class="btn btn-primary" onclick="submitVideoRec()">📤 Kirim Rekomendasi</button>
+      <div id="videoRecResult" style="margin-top:1rem;"></div>
+    </div>
+
+    <!-- Riwayat Rekomendasi -->
+    <div id="videoRecHistory" style="margin-top:2rem;"></div>
+  </div>
+</section>
+
+<!-- Panduan Menonton -->
+<section class="bg-gray">
+  <div class="container">
+    <h2 class="section-title">Panduan Menonton yang Bijak</h2>
+    <p class="section-subtitle">Agar video edukasi ini memberikan manfaat maksimal</p>
+    <div class="grid grid-3">
+      <div class="card fade-in">
+        <div class="card-icon">🧠</div>
+        <h3 class="card-title">Tonton dengan Kritis</h3>
+        <p class="card-text">Jangan hanya menonton. Analisis apa yang salah dalam video, mengapa terjadi, dan apa yang seharusnya dilakukan berbeda.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">💬</div>
+        <h3 class="card-title">Diskusikan Bersama</h3>
+        <p class="card-text">Bagikan video ini kepada teman dan keluarga. Diskusikan tentang pelajaran yang dapat diambil dari setiap konten.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">🔄</div>
+        <h3 class="card-title">Hubungkan dengan Materi</h3>
+        <p class="card-text">Kaitkan apa yang Anda tonton dengan materi di halaman Fenomena Sosial dan Nilai Moral untuk pemahaman yang lebih komprehensif.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quote -->
+<section class="pancasila-strip">
+  <div class="container" style="text-align:center;">
+    <img src="img/garuda.webp" alt="Garuda" style="width:80px;margin:0 auto 1.5rem;opacity:0.85;">
+    <blockquote style="font-family:'Lora',serif;font-style:italic;font-size:clamp(1.2rem,2.5vw,1.6rem);color:white;max-width:700px;margin:0 auto 1rem;line-height:1.6;">
+      "Dari video-video ini, kita belajar bahwa intoleransi bukan hanya masalah orang lain — itu adalah masalah kita bersama yang harus kita selesaikan bersama."
+    </blockquote>
+    <p style="color:var(--accent-light);font-size:0.875rem;font-weight:600;">— Komitmen SIKUBER untuk Indonesia Toleran —</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white" style="text-align:center;">
+  <div class="container" style="max-width:600px;">
+    <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:1rem;color:var(--text);">Sudah Menonton? Sekarang Bertindak!</h2>
+    <p style="color:var(--text-light);margin-bottom:2rem;line-height:1.7;">Laporkan konten intoleran yang Anda temui, atau ikuti quiz untuk menguji pemahaman Anda.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="pengaduan.html" class="btn btn-primary">📝 Buat Pengaduan</a>
+      <a href="quiz.html" class="btn btn-outline">❓ Ikuti Quiz</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="img/logo.png" alt="SIKUBER" class="footer-logo">
+        <h4>SIKUBER</h4>
+        <p>Platform edukasi toleransi beragama berbasis nilai-nilai Pancasila.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Menu</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fenomena.html">Fenomena Sosial</a></li>
+          <li><a href="moral.html">Nilai Moral & Etika</a></li>
+          <li><a href="simulasi.html">Simulasi Komentar</a></li>
+          <li><a href="quiz.html">Quiz Toleransi</a></li>
+          <li><a href="pengaduan.html">Simulasi Pengaduan</a></li>
+          <li><a href="video.html">Video Edukasi</a></li>
+          <li><a href="kesimpulan.html">Kesimpulan</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <p>📧 [email Anda]</p>
+        <p style="margin-top:0.5rem;">📞 [nomor HP Anda]</p>
+        <p style="margin-top:0.5rem;">📍 Jakarta, Indonesia</p>
+        <div style="margin-top:1.5rem;">
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);">Tugas Pendidikan Pancasila</p>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);">"Pancasila sebagai Nilai Moral dan Etika di Era Digital"</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 <span>SIKUBER</span> — Sistem Informasi Kerukunan Beragama. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollToTop">↑</button>
+
+<style>
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border: 1.5px solid rgba(13,44,110,0.15);
+  border-radius: 100px;
+  background: var(--white);
+  color: var(--text-light);
+  font-family: inherit; font-size: 0.875rem; font-weight: 600;
+  cursor: pointer; transition: all 0.25s;
+}
+.filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+.filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+body.dark-mode .filter-btn { background: var(--off-white); border-color: rgba(255,255,255,0.1); }
+body.dark-mode .filter-btn.active { background: var(--primary); }
+</style>
+
+<script src="js/main.js"></script>
+<script>
+function filterVideos(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll('#videoGrid .video-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const show = cat === 'all' || card.dataset.category === cat;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.getElementById('noResult').style.display = visible === 0 ? 'block' : 'none';
+}
+
+function submitVideoRec() {
+  const title = document.getElementById('videoTitle').value.trim();
+  const url = document.getElementById('videoUrl').value.trim();
+  const kat = document.getElementById('videoKategori').value;
+  const desc = document.getElementById('videoDesc').value.trim();
+  const result = document.getElementById('videoRecResult');
+
+  if (!title || !url) {
+    result.innerHTML = '<div class="info-box warning"><span>⚠️</span><div><div class="info-box-title">Lengkapi judul dan URL video.</div></div></div>';
+    return;
+  }
+
+  const recs = JSON.parse(localStorage.getItem('sikuber_video_recs') || '[]');
+  recs.unshift({ title, url, kat, desc, date: new Date().toLocaleDateString('id-ID') });
+  localStorage.setItem('sikuber_video_recs', JSON.stringify(recs));
+
+  result.innerHTML = '<div class="info-box success"><span>✅</span><div><div class="info-box-title">Rekomendasi berhasil disimpan!</div><p>Terima kasih atas kontribusi Anda untuk edukasi toleransi.</p></div></div>';
+  document.getElementById('videoTitle').value = '';
+  document.getElementById('videoUrl').value = '';
+  document.getElementById('videoDesc').value = '';
+  loadVideoRecs();
+}
+
+function loadVideoRecs() {
+  const container = document.getElementById('videoRecHistory');
+  const recs = JSON.parse(localStorage.getItem('sikuber_video_recs') || '[]');
+  if (!recs.length) { container.innerHTML = ''; return; }
+  container.innerHTML = `
+    <h4 style="font-weight:700;color:var(--text);margin-bottom:1rem;">📋 Rekomendasi Tersimpan (${recs.length})</h4>
+    ${recs.map(r => `
+      <div class="report-item" style="margin-bottom:0.75rem;">
+        <div style="font-weight:700;font-size:0.95rem;color:var(--text);">${r.title}</div>
+        <div style="font-size:0.8rem;color:var(--mid-gray);margin:0.25rem 0;">${r.date} ${r.kat ? '· ' + r.kat : ''}</div>
+        ${r.desc ? `<p style="font-size:0.85rem;color:var(--text-light);">${r.desc.substring(0,100)}${r.desc.length>100?'...':''}</p>` : ''}
+        <a href="${r.url}" target="_blank" style="font-size:0.8rem;color:var(--primary);font-weight:600;">🔗 Lihat Video</a>
+      </div>`).join('')}
+    <button class="btn btn-outline btn-small" style="margin-top:0.5rem;" onclick="if(confirm('Hapus semua rekomendasi?')){localStorage.removeItem('sikuber_video_recs');loadVideoRecs();}">🗑️ Hapus Semua</button>`;
+}
+
+document.addEventListener('DOMContentLoaded', loadVideoRecs);
+</script>
+</body>
+</html>
