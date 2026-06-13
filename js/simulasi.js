@@ -1,7 +1,9 @@
 // SIKUBER - Simulasi Komentar
+// Daftar kata kasar/intoleran komprehensif (Indonesia + Inggris)
 
 const intolerantWords = [
-    // ===== BAHASA INDONESIA - Kata Kasar Umum =====
+
+  // ===== BAHASA INDONESIA - Kata Kasar Umum =====
   'anjing','anjir','anjrit','anying',
   'bangsat','brengsek','bajingan','bejad','bejat',
   'babi','tai','taik','tahi',
@@ -48,9 +50,8 @@ const intolerantWords = [
   'penghina','terkutuk','laknat','celaka','munafik','penipu','musuh','kontol',
   'memek','pepek','babi','ngentot','ngewe','goblok','bujang','totong','jomok',
   'gay','lesbian','lgbt','sepong','jilmek','bokep','porno','paok','bangke',
-];
 
-// ===== BAHASA INGGRIS - Kata Kasar Umum =====
+  // ===== BAHASA INGGRIS - Kata Kasar Umum =====
   'fuck','fucked','fucker','fucking','fck','f*ck','f**k',
   'shit','bullshit','shitty','shtty','sh*t',
   'bitch','b*tch','btch',
@@ -96,7 +97,7 @@ const intolerantWords = [
   'numbnuts','numbskull',
   'imbecile',
 
- // ===== KATA INTOLERANSI AGAMA =====
+  // ===== KATA INTOLERANSI AGAMA =====
   'agama sesat','agamamu sesat','agama lo sesat','agama kamu sesat',
   'ajaran sesat','aliran sesat',
   'kafir lo','lo kafir','kamu kafir','ente kafir',
@@ -155,10 +156,24 @@ function checkComment() {
   }
 
   const lower = text.toLowerCase();
-  const found = intolerantWords.filter(w => lower.includes(w));
+
+  // Deteksi kata kasar — cek apakah kata/frasa ada dalam teks
+  const found = uniqueIntolerantWords.filter(w => {
+    // Untuk kata pendek (< 4 huruf), cek sebagai kata utuh agar tidak false positive
+    if (w.length <= 3) {
+      const regex = new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+      return regex.test(lower);
+    }
+    return lower.includes(w);
+  });
+
   const tip = tolerantTips[Math.floor(Math.random() * tolerantTips.length)];
 
   if (found.length > 0) {
+    // Tampilkan maks 6 kata yang ditemukan agar tidak terlalu panjang
+    const displayFound = found.slice(0, 6);
+    const more = found.length > 6 ? ` <span style="color:var(--danger);font-size:0.8rem;">+${found.length - 6} lainnya</span>` : '';
+
     container.innerHTML = `
       <div class="card" style="border-left: 4px solid var(--danger);">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
@@ -170,8 +185,10 @@ function checkComment() {
         </div>
         <div class="info-box danger" style="margin-bottom:1rem;">
           <span>🚩</span>
-          <div><div class="info-box-title">Kata tidak toleran ditemukan:</div>
-          <p>${found.map(w=>`<span class="badge badge-danger">${w}</span>`).join(' ')}</p></div>
+          <div>
+            <div class="info-box-title">Kata tidak pantas ditemukan (${found.length} kata):</div>
+            <p style="margin-top:0.35rem;">${displayFound.map(w=>`<span class="badge badge-danger">${w}</span>`).join(' ')}${more}</p>
+          </div>
         </div>
         <div class="info-box info">
           <span>💡</span>
@@ -195,7 +212,7 @@ function checkComment() {
         <div class="info-box success" style="margin-bottom:1rem;">
           <span>🌟</span>
           <div><div class="info-box-title">Komentar Anda terdeteksi sebagai TOLERAN!</div>
-          <p>Tidak ditemukan kata-kata intoleran. Komentar Anda sudah mencerminkan semangat Bhinneka Tunggal Ika.</p></div>
+          <p>Tidak ditemukan kata-kata tidak pantas. Komentar Anda sudah mencerminkan semangat Bhinneka Tunggal Ika.</p></div>
         </div>
         <div class="info-box info">
           <span>💡</span>
