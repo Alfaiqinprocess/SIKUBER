@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kesimpulan - SIKUBER</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="logo.ico">
 </head>
 <body>
 <div id="loadingScreen"><div class="spinner"></div></div>
@@ -128,6 +127,75 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- 10 Komitmen Pribadi -->
+<section class="bg-white">
+  <div class="container">
+    <p class="section-eyebrow">Ambil Komitmen</p>
+    <h2 class="section-title">10 Komitmen Digital Toleran</h2>
+    <p class="section-subtitle">Bacalah dan ambil komitmen ini sebagai janji pribadi Anda untuk Indonesia yang lebih toleran.</p>
+
+    <div class="card fade-in" style="max-width:800px;margin:0 auto;background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:white;border:none;">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <img src="img/garuda.webp" alt="Garuda" style="width:70px;margin:0 auto 1rem;opacity:0.9;">
+        <h3 style="color:var(--accent-light);font-size:1.3rem;font-weight:800;">Ikrar Toleransi Digital</h3>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Saya berkomitmen untuk:</p>
+      </div>
+
+      <ol style="margin-left:1.5rem;line-height:0;" id="komitmenList">
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <span class="check-icon" id="k1" onclick="toggleKomitmen('k1')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Tidak menyebarkan ujaran kebencian berbasis agama di media sosial apapun.</span>
+        </li>
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <span class="check-icon" id="k2" onclick="toggleKomitmen('k2')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Selalu memverifikasi informasi tentang agama sebelum membagikannya kepada orang lain.</span>
+        </li>
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <span class="check-icon" id="k3" onclick="toggleKomitmen('k3')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Menghormati hari raya dan ritual keagamaan semua agama yang diakui di Indonesia.</span>
+        </li>
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <span class="check-icon" id="k4" onclick="toggleKomitmen('k4')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Berani melaporkan konten intoleran yang saya temui di platform digital manapun.</span>
+        </li>
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <span class="check-icon" id="k5" onclick="toggleKomitmen('k5')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Berkomunikasi dengan sopan, santun, dan penuh empati di semua platform digital.</span>
+        </li>
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <span class="check-icon" id="k6" onclick="toggleKomitmen('k6')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Mengingatkan orang-orang di sekitar saya dengan cara yang bijak dan penuh kasih sayang ketika mereka bersikap intoleran.</span>
+        </li>
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <span class="check-icon" id="k7" onclick="toggleKomitmen('k7')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Tidak menggunakan agama sebagai alat untuk merendahkan, menyingkirkan, atau mendiskriminasi orang lain.</span>
+        </li>
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <span class="check-icon" id="k8" onclick="toggleKomitmen('k8')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Terus belajar dan memperbarui pemahaman tentang keberagaman agama dan budaya di Indonesia.</span>
+        </li>
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <span class="check-icon" id="k9" onclick="toggleKomitmen('k9')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Menjadi contoh teladan toleransi digital bagi keluarga, teman, dan komunitas saya.</span>
+        </li>
+        <li class="komitmen-item fade-in" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 0;">
+          <span class="check-icon" id="k10" onclick="toggleKomitmen('k10')" style="cursor:pointer;flex-shrink:0;">○</span>
+          <span style="color:rgba(255,255,255,0.85);font-size:0.95rem;">Mengamalkan nilai-nilai Pancasila, khususnya Sila Pertama, dalam setiap aspek kehidupan digital saya.</span>
+        </li>
+      </ol>
+
+      <div id="komitmenStatus" style="margin-top:1.5rem;text-align:center;padding:1rem;background:rgba(255,255,255,0.08);border-radius:var(--radius);">
+        <span style="color:var(--accent-light);font-weight:700;" id="komitmenCount">0 / 10</span>
+        <span style="color:rgba(255,255,255,0.6);font-size:0.875rem;"> komitmen telah diambil</span>
+        <div id="komitmenBar" style="height:6px;background:rgba(255,255,255,0.15);border-radius:3px;margin-top:0.75rem;overflow:hidden;">
+          <div id="komitmenFill" style="height:100%;width:0%;background:var(--accent);border-radius:3px;transition:width 0.4s ease;"></div>
+        </div>
+      </div>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;text-align:center;margin-top:1rem;">💡 Klik lingkaran di setiap poin untuk menandai komitmen Anda</p>
     </div>
   </div>
 </section>
@@ -266,7 +334,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 <span>SIKUBER</span> — Sistem Informasi Kerukunan Beragama. All rights reserved.</p>
+      <p>&copy; 2024 <span>SIKUBER</span> — Sistem Informasi Kerukunan Beragama. All rights reserved.</p>
     </div>
   </div>
 </footer>
